@@ -4,21 +4,25 @@ import pathlib
 
 
 
-
+#path
 path = os.chdir(r"C:\Users\progl\Downloads")
 os.listdir(path) 
 
+
+#video type and image types
 image_types = ['.jpg', '.JPG', '.png' ,'.PNG' ,'.jpeg' ,'.JPEG']
    
 video_types = ['.mp4', '.mov', '.mpg', '.flv'] 
 
 
+#creating those folders if they don't exist
 folder_application = pathlib.Path("applications")
 folder_images = pathlib.Path("images")
 folder_videos = pathlib.Path("videos")
 folder_sql = pathlib.Path("sql files")
 folder_zip = pathlib.Path("zip files")
 
+#checking if the folder exist
 if folder_application.exists ():
     print ("The applications Folder exist")
 else:
@@ -26,26 +30,26 @@ else:
     os.makedirs(newpath) 
 
 
-
+#checking if the folder exist
 if folder_images.exists ():  
     print ("The images Folder exist")
 else:
     newpath = r'C:\Users\progl\Downloads\images' 
     os.makedirs(newpath) 
 
-
+#checking if the folder exist
 if folder_videos.exists ():  
     print ("The videos Folder exist")
 else:
     newpath = r'C:\Users\progl\Downloads\videos' 
     os.makedirs(newpath)    
-
+#checking if the folder exist
 if folder_sql.exists ():  
     print ("The sql Folder exist")
 else:
     newpath = r'C:\Users\progl\Downloads\sql files' 
     os.makedirs(newpath) 
-
+#checking if the folder exist
 if folder_zip.exists ():  
     print ("The zip Folder exist")
 else:
